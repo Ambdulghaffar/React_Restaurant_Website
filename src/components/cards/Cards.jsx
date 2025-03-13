@@ -11,7 +11,9 @@ function Cards({
   cardTitleStyle, 
   cardBodyStyle,
   cardImgStyle,
-  cardstyle
+  cardstyle,
+  cardstyletext1,
+  cardstylebutton
 }) {
   const [colorButton, setcolorButton] = useState(false);
   return (
@@ -30,13 +32,14 @@ function Cards({
           <h5 class="card-title fw-bold" style={{ fontSize: "120px", ...cardTitleStyle  }}>
             {cardtitle1} <br /> {cardtitle2}
           </h5>
-          <p class="card-text mt-5 mb-5 fw-bold fw-lighter">
+          <p class="card-text mt-5 mb-5 fw-bold fw-lighter" style={{...cardstyletext1}}>
             {cardtext1} <br /> {cardtext2}
           </p>
           <p class="card-text">
             <small>
               <button
                 type="button"
+                style={{...cardstylebutton}}
                 className={`btn  fs-5 fw-bold px-5 py-3 ${
                   colorButton ? "btn-success" : "btn-warning"
                 }`}
