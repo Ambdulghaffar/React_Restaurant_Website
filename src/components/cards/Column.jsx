@@ -27,7 +27,7 @@ function Column({ img, alt, icon, name }) {
           width: "100%",
           height: "100%",
           objectFit: "cover",
-          filter: "brightness(0.7)",
+          filter: "brightness(0.5)",
         }}
       />
 
@@ -38,10 +38,8 @@ function Column({ img, alt, icon, name }) {
       >
         <p
           className={`border border-3 text-center px-3 pb-2  text-white rounded-circle 
-          ${hover ? "bg-warning" : "bg-dark-subtle"}`}
-          style={{
-            fontSize: "80px",
-          }}
+            ${hover ? "bg-warning" : ""}`}
+            style={{ backgroundColor: hover ? "" : "#6f42c1" ,fontSize: "80px"}}
         >
           {icon}
         </p>

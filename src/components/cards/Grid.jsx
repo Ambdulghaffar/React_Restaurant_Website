@@ -1,42 +1,49 @@
 import React from "react";
 import { FaStar } from "react-icons/fa6";
-import pizza4 from "../../assets/pizza4.jpg";
+import { FaRegStar } from "react-icons/fa";
 
-function Grid() {
-  function IconLoop({ count }) {
-    let icons = [];
-    for (let i = 0; i < count; i++) {
-      icons.push(<FaStar className="text-warning me-1" key={i} size={20} />);
-    }
-    return <p>{icons}</p>;
-  }
+function Grid({
+  NamePizza,
+  Pizza,
+  OldPrice,
+  NewPrice,
+  whiteStars,
+  yellowStars,
+}) {
   return (
     <div>
-          <div class="col">
-            <div class="card h-100">
-              <p className="text-center mt-5 ">
-                <img
-                  src={pizza4}
-                  style={{ width: "200px", height: "auto" }}
-                  alt=""
-                  className="bg-light"
-                />
+      <div class="col">
+        <div class="card h-100">
+          <p className="text-center mt-5 ">
+            <img
+              src={Pizza}
+              style={{ width: "200px", height: "auto" }}
+              alt=""
+            />
+          </p>
+          <div class="card-body ms-4">
+            <h5 class="card-titlel">
+
+              {[...Array(yellowStars)].map((_, i) => (
+                <FaStar key={i} className="text-warning" />
+              ))}
+              {/* Cette syntaxe crée un tableau de longueur yellowStars et mappe chaque élément pour afficher une étoile jaune. */}
+
+              {[...Array(whiteStars)].map((_, i) => (
+                <FaRegStar key={i} />
+              ))}
+            </h5>
+            <p class="card-text ">{NamePizza}</p>
+            <div className="d-flex ">
+              <p className=" text-secondary text-decoration-line-through">
+                {OldPrice}
               </p>
-              <div class="card-body">
-                <h5 class="card-titlel ms-3">
-                  <IconLoop count={5} />
-                </h5>
-                <p class="card-text ms-3">Margharita Pizza</p>
-                <div className="d-flex ">
-                  <p className="ms-3 text-secondary text-decoration-line-through">
-                    $40.00
-                  </p>
-                  <p className="ms-2 text-info">$24.00</p>
-                </div>
-              </div>
+              <p className="ms-2 text-info">{NewPrice}</p>
             </div>
           </div>
         </div>
+      </div>
+    </div>
   );
 }
 

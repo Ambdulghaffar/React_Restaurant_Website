@@ -10,18 +10,26 @@ import Column from "../../components/cards/Column";
 import Cards from "../../components/cards/Cards";
 import banner1 from "../../assets/banner1.jpg";
 import Grid from "../../components/cards/Grid";
+import pizza4 from "../../assets/pizza4.jpg";
+import pizza5 from "../../assets/pizza5.jpg";
+import pizza6 from "../../assets/pizza6.jpg";
+import pizza7 from "../../assets/pizza7.jpg";
+import { LuLeaf } from "react-icons/lu";
+import { PiHamburgerBold } from "react-icons/pi";
+import { CiIceCream } from "react-icons/ci";
+import { TbMeat } from "react-icons/tb";
 
 function Home() {
   return (
     <>
-      <div className="">
+      <div>
         <Banner />
-        <h1 className="text-center  my-5 fs-1">Our Menu</h1>
+        <h1 className="text-center  my-5" style={{fontSize:"60px"}}>Our Menu</h1>
         <div class="container text-center">
           <div class="row">
             <Column
               img={salade}
-              icon={<i className="bi bi-egg-fried"></i>}
+              icon={<LuLeaf />}
               name="Salads"
             />
             <Column
@@ -31,7 +39,7 @@ function Home() {
             />
             <Column
               img={burger}
-              icon={<i class="bi bi-cup-straw"></i>}
+              icon={< PiHamburgerBold/>}
               name="Burgers"
             />
           </div>
@@ -40,7 +48,7 @@ function Home() {
           <div class="row">
             <Column
               img={dessert}
-              icon={<i className="bi bi-cake"></i>}
+              icon={<CiIceCream/>}
               name="Desserts"
             />
             <Column
@@ -50,7 +58,7 @@ function Home() {
             />
             <Column
               img={seafood}
-              icon={<i className="bi bi-egg"></i>}
+              icon={<TbMeat/>}
               name="Seafood"
             />
           </div>
@@ -80,13 +88,13 @@ function Home() {
           }}
           cardTitleStyle={{ fontSize: "60px", fontFamily: "serif" }}
         />
-        <h1 className="text-center m-5">Selected Pizzas</h1>
+        <h1 className="text-center m-5 fw-medium " style={{fontSize:"60px"}}>Selected Pizzas</h1>
         <div className="container">
           <div className="row row-cols-1 row-cols-md-4 g-4 py-4">
-            <Grid />
-            <Grid />
-            <Grid />
-            <Grid />
+            <Grid Pizza={pizza4} NamePizza="Margherita Pizza" NewPrice="$24.00"  yellowStars={4} whiteStars={1} />
+            <Grid Pizza={pizza5} NamePizza="Mushroom Pizza" NewPrice="$24.00" yellowStars={5}/>
+            <Grid Pizza={pizza6} NamePizza="Hawaiian Pizza" NewPrice="$24.00 " yellowStars={5}/>
+            <Grid Pizza={pizza7} NamePizza="Pesto Pizza" NewPrice="$24.00" OldPrice="$40.00" yellowStars={4} whiteStars={1}/>
           </div>
         </div>
       </div>
