@@ -9,9 +9,7 @@ import seafood from "../../assets/seafood.jpg";
 import Column from "../../components/cards/Column";
 import Cards from "../../components/cards/Cards";
 import banner1 from "../../assets/banner1.jpg";
-import { BiFontFamily, BiFontSize } from "react-icons/bi";
-import { MdHeight } from "react-icons/md";
-import { CiTextAlignRight } from "react-icons/ci";
+import pizza4 from "../../assets/pizza4.jpg";
 
 function Home() {
   return (
@@ -84,17 +82,19 @@ function Home() {
         />
         <h1 className="text-center m-5">Selected Pizzas</h1>
         <div className="container">
-          <div class="row row-cols-1 row-cols-md-4 g-4">
+          <div class="row row-cols-1 row-cols-md-4 g-4 py-4">
             <div class="col">
               <div class="card h-100">
-                <img src="..." class="card-img-top" alt="..." />
+              <p className="bg-info text-white px-3 py-2 d-inline">New</p>
+                <p className="text-center "  >
+                  <img src={pizza4} style={{ width: "200px", height: "auto" }} alt="" />
+                </p>
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
+                  <h5 class="card-titlel ms-3"><i class="bi bi-star-fill text-warning"></i> <i class="bi bi-star-fill text-warning"></i> <i class="bi bi-star-fill text-warning"></i> <i class="bi bi-star-fill text-warning "></i> <i class="bi bi-star-fill text-warning"></i></h5>
+                  <p class="card-text ms-3">
+                 Margharita Pizza
                   </p>
+                  <p className="ms-3 text-info">$24.00</p>
                 </div>
               </div>
             </div>
