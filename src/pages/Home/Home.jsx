@@ -18,6 +18,7 @@ import { LuLeaf } from "react-icons/lu";
 import { PiHamburgerBold } from "react-icons/pi";
 import { CiIceCream } from "react-icons/ci";
 import { TbMeat } from "react-icons/tb";
+import ButtonsGrid from "../../components/cards/ButtonsGrid";
 
 function Home() {
   return (
@@ -92,8 +93,8 @@ function Home() {
         <div className="container">
           <div className="row row-cols-1 row-cols-md-4 g-4 py-4">
             <Grid Pizza={pizza4} NamePizza="Margherita Pizza" NewPrice="$24.00"  yellowStars={4} whiteStars={1} />
-            <Grid Pizza={pizza5} NamePizza="Mushroom Pizza" NewPrice="$24.00" yellowStars={5}/>
-            <Grid Pizza={pizza6} NamePizza="Hawaiian Pizza" NewPrice="$24.00 " yellowStars={5}/>
+            <Grid Pizza={pizza5} NamePizza="Mushroom Pizza" NewPrice="$24.00" yellowStars={5} whiteStars={0}/>
+            <Grid Pizza={pizza6} NamePizza="Hawaiian Pizza" NewPrice="$24.00 " yellowStars={5} whiteStars={0}/>
             <Grid Pizza={pizza7} NamePizza="Pesto Pizza" NewPrice="$24.00" OldPrice="$40.00" yellowStars={4} whiteStars={1}/>
           </div>
         </div>
