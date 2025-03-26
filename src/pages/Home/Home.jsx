@@ -25,43 +25,29 @@ function Home() {
     <>
       <div>
         <Banner />
-        <h1 className="text-center  my-5" style={{fontSize:"60px"}}>Our Menu</h1>
+        <h1 className="text-center  my-5" style={{ fontSize: "60px" }}>
+          Our Menu
+        </h1>
         <div class="container text-center">
           <div class="row">
-            <Column
-              img={salade}
-              icon={<LuLeaf />}
-              name="Salads"
-            />
+            <Column img={salade} icon={<LuLeaf />} name="Salads" />
             <Column
               img={pizza3}
               icon={<i className="bi bi-egg-fried"></i>}
               name="Pizzas"
             />
-            <Column
-              img={burger}
-              icon={< PiHamburgerBold/>}
-              name="Burgers"
-            />
+            <Column img={burger} icon={<PiHamburgerBold />} name="Burgers" />
           </div>
         </div>
         <div class="container text-center mt-4 mb-5">
           <div class="row">
-            <Column
-              img={dessert}
-              icon={<CiIceCream/>}
-              name="Desserts"
-            />
+            <Column img={dessert} icon={<CiIceCream />} name="Desserts" />
             <Column
               img={drinks}
               icon={<i class="bi bi-cup-straw"></i>}
               name="Drinks"
             />
-            <Column
-              img={seafood}
-              icon={<TbMeat/>}
-              name="Seafood"
-            />
+            <Column img={seafood} icon={<TbMeat />} name="Seafood" />
           </div>
         </div>
         <Cards
@@ -89,13 +75,76 @@ function Home() {
           }}
           cardTitleStyle={{ fontSize: "60px", fontFamily: "serif" }}
         />
-        <h1 className="text-center m-5 fw-medium " style={{fontSize:"60px"}}>Selected Pizzas</h1>
+        <h1 className="text-center m-5 fw-medium " style={{ fontSize: "60px" }}>
+          Selected Pizzas
+        </h1>
         <div className="container">
           <div className="row row-cols-1 row-cols-md-4 g-4 py-4">
-            <Grid Pizza={pizza4} NamePizza="Margherita Pizza" NewPrice="$24.00"  yellowStars={4} whiteStars={1} />
-            <Grid Pizza={pizza5} NamePizza="Mushroom Pizza" NewPrice="$24.00" yellowStars={5} whiteStars={0}/>
-            <Grid Pizza={pizza6} NamePizza="Hawaiian Pizza" NewPrice="$24.00 " yellowStars={5} whiteStars={0}/>
-            <Grid Pizza={pizza7} NamePizza="Pesto Pizza" NewPrice="$24.00" OldPrice="$40.00" yellowStars={4} whiteStars={1}/>
+            <Grid
+              Pizza={pizza4}
+              NamePizza="Margherita Pizza"
+              NewPrice="$24.00"
+              yellowStars={4}
+              whiteStars={1}
+            />
+            <Grid
+              Pizza={pizza5}
+              NamePizza="Mushroom Pizza"
+              NewPrice="$24.00"
+              yellowStars={5}
+              whiteStars={0}
+            />
+            <Grid
+              Pizza={pizza6}
+              NamePizza="Hawaiian Pizza"
+              NewPrice="$24.00 "
+              yellowStars={5}
+              whiteStars={0}
+            />
+            <Grid
+              Pizza={pizza7}
+              NamePizza="Pesto Pizza"
+              NewPrice="$24.00"
+              OldPrice="$40.00"
+              yellowStars={4}
+              whiteStars={1}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="my-5">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <p className="fs-3 fw-bold">Ce qu'on offre</p>
+              <div className="d-flex justify-content-between">
+                <div>
+                  <p>Pizzas</p>
+                  <p>Burgers</p>
+                  <p>Salades</p>
+                </div>
+                <div>
+                  <p>Drinks</p>
+                  <p>Tacos</p>
+                  <p>Drinks</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <p className="fs-3 fw-bold">Liens</p>
+              <div>
+                <a href="">Acceuil</a> <br />
+                <a href="">Menu</a> <br />
+                <a href="">Commandes</a><br />
+                <a href="">Contacts</a>
+              </div>
+            </div>
+            <div class="col">
+              <p className="fs-3 fw-bold">Contacts</p>
+              <p>Telephone</p>
+              <p>email</p>
+              <p>emplacement</p>
+            </div>
           </div>
         </div>
       </div>
