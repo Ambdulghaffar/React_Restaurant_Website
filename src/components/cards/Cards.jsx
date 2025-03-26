@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import ButtonCards from "./ButtonCards";
 
 function Cards({
   img,
@@ -7,15 +7,14 @@ function Cards({
   cardtitle2,
   cardtext1,
   cardtext2,
-  cardbutton,
   cardTitleStyle, 
   cardBodyStyle,
   cardImgStyle,
   cardstyle,
   cardstyletext1,
+  cardbutton, 
   cardstylebutton
 }) {
-  const [colorButton, setcolorButton] = useState(false);
   return (
     <div>
       <div className="card text-bg-dark" style={{...cardstyle}} >
@@ -37,18 +36,7 @@ function Cards({
           </p>
           <p class="card-text">
             <small>
-              <button
-                type="button"
-                style={{...cardstylebutton}}
-                className={`btn  fs-5 fw-bold px-5 py-3 ${
-                  colorButton ? "btn-success" : "btn-warning"
-                }`}
-                onMouseEnter={() => setcolorButton(true)}
-                onMouseLeave={() => setcolorButton(false)}
-              >
-
-                {cardbutton}
-              </button>
+              <ButtonCards cardbutton={cardbutton} cardstylebutton={cardstylebutton}/>
             </small>
           </p>
         </div>

@@ -112,6 +112,21 @@ function Home() {
           </div>
         </div>
       </div>
+      <Cards
+        img={banner1}
+        cardtitle1="PizzaHouse-delicieuses Pizzas Livrées"
+        cardTitleStyle={{
+          marginRight: "150px",
+          fontFamily: "serif",
+          fontSize: "30px",
+          textAlign:"center"
+        }}
+        cardImgStyle={{
+          height: "400px",
+          objectFit: "cover",
+          filter: "brightness(0.5)",
+        }}
+      ></Cards>
       <div className="my-5">
         <div class="container text-center">
           <div class="row">
@@ -135,7 +150,8 @@ function Home() {
               <div>
                 <a href="">Acceuil</a> <br />
                 <a href="">Menu</a> <br />
-                <a href="">Commandes</a><br />
+                <a href="">Commandes</a>
+                <br />
                 <a href="">Contacts</a>
               </div>
             </div>
