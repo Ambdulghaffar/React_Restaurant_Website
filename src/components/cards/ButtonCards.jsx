@@ -7,7 +7,7 @@ function ButtonCards({cardbutton,cardstylebutton}) {
       <button
         type="button"
         style={{ ...cardstylebutton }}
-        className={`btn  fs-5 fw-bold px-5 py-3 ${
+        className={`btn fs-5 fw-bold px-5 py-3 ${
           colorButton ? "btn-success" : "btn-warning"
         }`}
         onMouseEnter={() => setcolorButton(true)}
