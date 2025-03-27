@@ -19,12 +19,8 @@ import { LuLeaf } from "react-icons/lu";
 import { PiHamburgerBold } from "react-icons/pi";
 import { CiIceCream } from "react-icons/ci";
 import { TbMeat } from "react-icons/tb";
-import { FaPhone } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-import { GiPositionMarker } from "react-icons/gi";
-import { FaFacebook } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaSquareInstagram } from "react-icons/fa6";
+import Footer from "../../components/header/Footer";
+
 
 
 function Home() {
@@ -142,60 +138,8 @@ function Home() {
         cardstylebutton={{
           marginLeft:"390px"
         }}
-      >
-      </Cards>
-      <div className="bg-dark text-white">
-        <div class="container">
-          <div class="row">
-            <div class="col my-5">
-              <p className="fs-3 fw-bold">Ce qu'on offre</p>
-              <div className="d-flex">
-                <div className="me-5">
-                  <p>Pizzas</p>
-                  <p>Burgers</p>
-                  <p>Salades</p>
-                </div>
-                <div className="">
-                  <p>Drinks</p>
-                  <p>Tacos</p>
-                  <p>Drinks</p>
-                </div>
-              </div>
-            </div>
-            <div class="col my-5">
-              <p className="fs-3 fw-bold">Liens</p>
-              <div>
-                <a href="">Acceuil</a> <br />
-                <a href="">Menu</a> <br />
-                <a href="">Commandes</a>
-                <br />
-                <a href="">Contacts</a>
-              </div>
-            </div>
-            <div class="col my-5">
-              <p className="fs-3 fw-bold">Contacts</p>
-              <p>
-                <FaPhone />
-              <a href="">0647890345</a>
-              </p>
-              <p>
-              <MdEmail />
-              <a href="">pizzahouse@email.com</a>
-              </p>
-              <p>
-              <GiPositionMarker />
-                175, bd Ibn Tachfine
-              </p>
-            </div>
-            <p className="text-center mb-5">
-              <span>© 2025. All Rights Reserved. Design by PizzaHouse</span>
-              <a href=""><FaFacebook className="mx-4 text-white  fs-4" /></a>
-              <a href=""><FaXTwitter className="me-4 text-white   fs-4"/></a>
-              <a href=""><FaSquareInstagram className="text-white  fs-4"/></a>
-            </p>
-          </div>
-        </div>
-      </div>
+      />
+      <Footer/>
     </>
   );
 }
