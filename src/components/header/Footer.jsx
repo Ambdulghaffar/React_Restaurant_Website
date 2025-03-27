@@ -6,8 +6,22 @@ import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
 
-function Footer() {
+function Hoverlink({href,children}) {
   const [hover, setHover] = useState(false);
+  return (
+    <a
+      href={href}
+      className={`text-decoration-none ${hover ? "text-warning" : "text-white"}`}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      {children}
+    </a>
+  );
+}
+
+
+function Footer() {
   return (
     <div className="bg-dark text-white">
       <div class="container">
@@ -16,128 +30,23 @@ function Footer() {
             <p className="fs-3 fw-bold">Ce qu'on offre</p>
             <div className="d-flex">
               <div className="me-5">
-                <p>
-                  <a
-                    href=""
-                    className={`text-decoration-none ${
-                      hover ? "text-warning" : "text-white"
-                    }`}
-                  >
-                    Pizzas
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href=""
-                    className={`text-decoration-none ${
-                      hover ? "text-warning" : "text-white"
-                    } `}
-                    onMouseEnter={() => setHover(true)}
-                    onMouseLeave={() => setHover(true)}
-                  >
-                    Burgers
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href=""
-                    className={`text-decoration-none ${
-                      hover ? "text-warning" : "text-white"
-                    } `}
-                    onMouseEnter={() => setHover(true)}
-                    onMouseLeave={() => setHover(true)}
-                  >
-                    Salades
-                  </a>
-                </p>
+              <p><Hoverlink href="">Pizzas</Hoverlink></p>                
+              <p><Hoverlink href="">Salade</Hoverlink></p>                
+              <p><Hoverlink href="">Burgers</Hoverlink></p>                
               </div>
               <div className="">
-                <p>
-                  <a
-                    href=""
-                    className={`text-decoration-none ${
-                      hover ? "text-warning" : "text-white"
-                    } `}
-                    onMouseEnter={() => setHover(true)}
-                    onMouseLeave={() => setHover(true)}
-                  >
-                    Drinks
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href=""
-                    className={`text-decoration-none ${
-                      hover ? "text-warning" : "text-white"
-                    } `}
-                    onMouseEnter={() => setHover(true)}
-                    onMouseLeave={() => setHover(true)}
-                  >
-                    Tacos
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href=""
-                    className={`text-decoration-none ${
-                      hover ? "text-warning" : "text-white"
-                    } `}
-                    onMouseEnter={() => setHover(true)}
-                    onMouseLeave={() => setHover(true)}
-                  >
-                    Drinks
-                  </a>
-                </p>
+              <p><Hoverlink href="">Desserts</Hoverlink></p> 
+              <p><Hoverlink href="">Drinks</Hoverlink></p> 
+              <p><Hoverlink href="">Tacos</Hoverlink></p> 
               </div>
             </div>
           </div>
           <div class="col my-5">
             <p className="fs-3 fw-bold">Liens</p>
             <div>
-              <a
-                href=""
-                className={`text-decoration-none ${
-                  hover ? "text-warning" : "text-white"
-                } `}
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(true)}
-              >
-                Acceuil
-              </a>{" "}
-              <br />
-              <a
-                href=""
-                className={`text-decoration-none ${
-                  hover ? "text-warning" : "text-white"
-                } `}
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(true)}
-              >
-                Menu
-              </a>{" "}
-              <br />
-              <a
-                href=""
-                className={`text-decoration-none ${
-                  hover ? "text-warning" : "text-white"
-                } `}
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(true)}
-              >
-                Commandes
-              </a>
-              <br />
-              <a
-                href=""
-                c
-                className={`text-decoration-none ${
-                  hover ? "text-warning" : "text-white"
-                } `}
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(true)}
-              >
-                Contacts
-              </a>
+            <p><Hoverlink href="">Acceuil</Hoverlink></p>
+            <p><Hoverlink href="">Menu</Hoverlink></p>
+            <p><Hoverlink href="">Contacts</Hoverlink></p>
             </div>
           </div>
           <div class="col my-5">
