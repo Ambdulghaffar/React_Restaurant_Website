@@ -52,7 +52,7 @@ function Grid({
               <p className=" text-secondary text-decoration-line-through">
                 {OldPrice}
               </p>
-              <p className="ms-2 text-info" style={{...NewPriceStyle}}>{NewPrice}</p>
+              <p className=" text-info" style={{...NewPriceStyle}}>{NewPrice}</p>
             </div>
           </div>
           {showbutton && (

@@ -54,18 +54,18 @@ function Footer() {
             <p>
               <FaPhone className="me-4 fs-5" />
               <a href="" className="text-decoration-none text-white">
-                0647890345
+                <Hoverlink>0647890345</Hoverlink>
               </a>
             </p>
             <p>
               <MdEmail className="me-4 fs-5" />
               <a href="#" className="text-decoration-none text-white">
-                pizzahouse@email.com
+                <Hoverlink>pizzahouse@email.com</Hoverlink>
               </a>
             </p>
             <p>
               <GiPositionMarker className="me-4 fs-5" />
-              <span>175, bd Ibn Tachfine</span>
+              <a href="" className="text-decoration-none text-white"><Hoverlink>75, bd Ibn Tachfine</Hoverlink></a>
             </p>
           </div>
           <p className="text-center mb-5">
