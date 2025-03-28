@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-function ButtonCards({cardbutton,cardstylebutton}) {
+function ButtonCards({cardbutton,cardstylebutton, showbutton = true}) {
   const [colorButton, setcolorButton] = useState(false);
   return (
     <div>
-      <button
+  { showbutton &&  <button
         type="button"
         style={{ ...cardstylebutton }}
         className={`btn fs-5 fw-bold px-5 py-3 ${
@@ -14,7 +14,7 @@ function ButtonCards({cardbutton,cardstylebutton}) {
         onMouseLeave={() => setcolorButton(false)}
       >
         {cardbutton}
-      </button>
+      </button>}
     </div>
   );
 }

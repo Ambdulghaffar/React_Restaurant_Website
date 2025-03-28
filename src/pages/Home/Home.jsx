@@ -9,16 +9,15 @@ import tacos from "../../assets/tacos.jpg";
 import Column from "../../components/cards/Column";
 import Cards from "../../components/cards/Cards";
 import banner1 from "../../assets/banner1.jpg";
+import banner2 from "../../assets/banner2.jpg";
 import Grid from "../../components/cards/Grid";
 import pizza4 from "../../assets/pizza4.jpg";
 import pizza5 from "../../assets/pizza5.jpg";
 import pizza6 from "../../assets/pizza6.jpg";
 import pizza7 from "../../assets/pizza7.jpg";
-import banner2 from "../../assets/banner2.jpg";
 import { LuLeaf } from "react-icons/lu";
 import { PiHamburgerBold } from "react-icons/pi";
 import { CiIceCream } from "react-icons/ci";
-import { TbMeat } from "react-icons/tb";
 import { GiTacos } from "react-icons/gi";
 import Footer from "../../components/header/Footer";
 
@@ -56,6 +55,7 @@ function Home() {
         </div>
         <Cards
           img={banner1}
+          showmotion={false}
           cardtitle1="Best atmosphere"
           cardtext1="PizzaHouse is the place of the best"
           cardtext2="pizza and high-quality service."

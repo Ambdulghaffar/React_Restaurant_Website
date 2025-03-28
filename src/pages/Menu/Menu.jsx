@@ -8,17 +8,18 @@ function Menu() {
     <>
       <Cards
         img={banner2}
-        cardtitle1="PizzaHouse - delicieuses Pizzas Livrées"
-        cardtext1="Commendez en ligne, savourez chez vous"
+        cardtitle1="Notre Menu"
+        cardtext1="_______"
         cardstyletext1={{
-          marginLeft: "310px",
-          fontSize: "20px",
+          marginLeft: "380px",
+          fontSize: "80px",
         }}
+        
         cardTitleStyle={{
           marginRight: "150px",
-          fontFamily: "serif",
-          fontSize: "30px",
+          fontSize: "100px",
           textAlign: "center",
+          fontFamily:""
         }}
         cardImgStyle={{
           height: "400px",
@@ -29,6 +30,8 @@ function Menu() {
         cardstylebutton={{
           marginLeft: "390px",
         }}
+        showbutton={false}
+        
       />
     </>
   );

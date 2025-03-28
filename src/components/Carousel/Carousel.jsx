@@ -9,7 +9,7 @@ function Carousel() {
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
-      <Cards img={Pizza1} alt="Pizza1" cardtitle1="Pizza de" cardtitle2="Qualité" cardtext1="Nous utilisons uniquement les meilleurs ingrédients pour " cardtext2="préparer des pizzas uniques pour nos clients." cardbutton="Voir notre Menu"/>
+      <Cards img={Pizza1}  alt="Pizza1" cardtitle1="Pizza de" cardtitle2="Qualité" cardtext1="Nous utilisons uniquement les meilleurs ingrédients pour " cardtext2="préparer des pizzas uniques pour nos clients." cardbutton="Voir notre Menu"/>
     </div>
     <div class="carousel-item" data-bs-interval="2000">
       <Cards img={Pizza2} alt="Pizza2" cardtitle1="Pizza" cardtitle2="Parfait" cardtext1="Vivez le goût d'une pizza parfaite chez " cardtext2="PizzaHouse, l'un des meilleurs restaurants!" cardbutton="Voir notre Menu"/>

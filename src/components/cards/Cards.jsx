@@ -1,5 +1,6 @@
 import ButtonCards from "./ButtonCards";
 
+
 function Cards({
   img,
   alt,
@@ -13,7 +14,8 @@ function Cards({
   cardstyle,
   cardstyletext1,
   cardbutton, 
-  cardstylebutton
+  cardstylebutton,
+  showbutton
 }) {
   return (
     <div>
@@ -36,7 +38,7 @@ function Cards({
           </p>
           <p class="card-text">
             <small>
-              <ButtonCards cardbutton={cardbutton} cardstylebutton={cardstylebutton}/>
+              <ButtonCards showbutton={showbutton} cardbutton={cardbutton} cardstylebutton={cardstylebutton}/>
             </small>
           </p>
         </div>
