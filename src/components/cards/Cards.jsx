@@ -27,8 +27,8 @@ function Cards({
             class="card-img"
             alt={alt}
             style={{ height: "700px", objectFit: "cover", ...cardImgStyle }}
-            animate={{ scale: [1, 1.1, 1] }} //Fait un zoom progressif de 1 à 1.1 puis revient à 1.
-            transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }} // Zoom en boucle
+            animate={{ scale: [1, 0.99, 1] }} //Fait un zoom progressif de 1 à 1.1 puis revient à 1.
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }} // Zoom en boucle
           />
         ) : (
           <img

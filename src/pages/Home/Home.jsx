@@ -88,6 +88,7 @@ function Home() {
               NewPrice="$24.00"
               yellowStars={4}
               whiteStars={1}
+              showbutton={false}
             />
             <Grid
               Pizza={pizza5}
@@ -95,6 +96,7 @@ function Home() {
               NewPrice="$24.00"
               yellowStars={5}
               whiteStars={0}
+              showbutton={false}
             />
             <Grid
               Pizza={pizza6}
@@ -102,6 +104,7 @@ function Home() {
               NewPrice="$24.00 "
               yellowStars={5}
               whiteStars={0}
+              showbutton={false}
             />
             <Grid
               Pizza={pizza7}
@@ -110,6 +113,7 @@ function Home() {
               OldPrice="$40.00"
               yellowStars={4}
               whiteStars={1}
+              showbutton={false}
             />
           </div>
         </div>
