@@ -1,5 +1,4 @@
 import React from "react";
-import Banner from "../../components/header/Banner";
 import salade from "../../assets/salade.jpg";
 import burger from "../../assets/burger.jpg";
 import pizza3 from "../../assets/pizza3.jpg";
@@ -20,8 +19,7 @@ import { PiHamburgerBold } from "react-icons/pi";
 import { CiIceCream } from "react-icons/ci";
 import { GiTacos } from "react-icons/gi";
 import Footer from "../../components/header/Footer";
-
-
+import Banner from "../../components/cards/Banner";
 
 function Home() {
   return (
@@ -54,8 +52,8 @@ function Home() {
           </div>
         </div>
         <Cards
+          shomotion={false}
           img={banner1}
-          showmotion={false}
           cardtitle1="Best atmosphere"
           cardtext1="PizzaHouse is the place of the best"
           cardtext2="pizza and high-quality service."
@@ -117,12 +115,13 @@ function Home() {
         </div>
       </div>
       <Cards
+        shomotion={false}
         img={banner2}
         cardtitle1="PizzaHouse - delicieuses Pizzas Livrées"
         cardtext1="Commendez en ligne, savourez chez vous"
         cardstyletext1={{
-          marginLeft:"310px",
-          fontSize:"20px"
+          marginLeft: "310px",
+          fontSize: "20px",
         }}
         cardTitleStyle={{
           marginRight: "150px",
@@ -137,10 +136,10 @@ function Home() {
         }}
         cardbutton="Commander"
         cardstylebutton={{
-          marginLeft:"390px"
+          marginLeft: "390px",
         }}
       />
-      <Footer/>
+      <Footer />
     </>
   );
 }
