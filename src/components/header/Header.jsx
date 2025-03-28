@@ -13,13 +13,13 @@ function Header() {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
         <li class="nav-item pe-4 fs-5">
-          <Link className="nav-link active fs-5 fw-bold" aria-current="page" to="/">Home</Link>
+          <Link className="nav-link active fs-5 fw-bold" aria-current="page" to="/">Accueil</Link>
         </li>
         <li class="nav-item pe-4 fs-5">
-          <Link className="nav-link fs-5 fw-bold" to="/about">About us</Link>
+          <Link className="nav-link fs-5 fw-bold" to="/about">Menu</Link>
         </li>
         <li class="nav-item pe-4 fs-5">
-          <Link className="nav-link fs-5 fw-bold" to="/typography">Typography</Link>
+          <Link className="nav-link fs-5 fw-bold" to="/typography">Commandes</Link>
         </li>
         <li class="nav-item pe-4 fs-5 fs-5 fw-bold">
           <Link className="nav-link" to="/contacts">Contacts</Link>

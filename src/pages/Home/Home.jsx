@@ -5,7 +5,7 @@ import burger from "../../assets/burger.jpg";
 import pizza3 from "../../assets/pizza3.jpg";
 import dessert from "../../assets/dessert.jpg";
 import drinks from "../../assets/drinks.jpg";
-import seafood from "../../assets/seafood.jpg";
+import seafood from "../../assets/tacos.jpg";
 import Column from "../../components/cards/Column";
 import Cards from "../../components/cards/Cards";
 import banner1 from "../../assets/banner1.jpg";
@@ -29,7 +29,7 @@ function Home() {
       <div>
         <Banner />
         <h1 className="text-center  my-5" style={{ fontSize: "60px" }}>
-          Our Menu
+          Notre Menu
         </h1>
         <div class="container text-center">
           <div class="row">
@@ -50,7 +50,7 @@ function Home() {
               icon={<i class="bi bi-cup-straw"></i>}
               name="Drinks"
             />
-            <Column img={seafood} icon={<TbMeat />} name="Seafood" />
+            <Column img={seafood} icon={<TbMeat />} name="Tacos" />
           </div>
         </div>
         <Cards

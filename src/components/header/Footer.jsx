@@ -59,7 +59,7 @@ function Footer() {
             </p>
             <p>
               <MdEmail className="me-4 fs-5" />
-              <a href="" className="text-decoration-none text-white">
+              <a href="#" className="text-decoration-none text-white">
                 pizzahouse@email.com
               </a>
             </p>
