@@ -17,7 +17,7 @@ function GridBoissons() {
             NamePizzaStyle={{
               fontSize: "20px",
             }}
-            NewPrice="25 Є"
+            NewPrice="25 "
             NewPriceStyle={{
               marginLeft: "90px",
             }}
@@ -30,7 +30,7 @@ function GridBoissons() {
             NamePizzaStyle={{
               fontSize: "20px",
             }}
-            NewPrice="15 Є"
+            NewPrice="15 "
             NewPriceStyle={{
               marginLeft: "90px",
             }}
@@ -43,7 +43,7 @@ function GridBoissons() {
             NamePizzaStyle={{
               fontSize: "20px",
             }}
-            NewPrice="24 Є "
+            NewPrice="24  "
             NewPriceStyle={{
               marginLeft: "90px",
             }}
@@ -56,7 +56,7 @@ function GridBoissons() {
             NamePizzaStyle={{
               fontSize: "20px",
             }}
-            NewPrice="30 Є"
+            NewPrice="30 "
             NewPriceStyle={{
               marginLeft: "90px",
             }}

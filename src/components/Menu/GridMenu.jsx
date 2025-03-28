@@ -8,12 +8,19 @@ import GridSupplements from "./GridSupplements";
 
 function GridMenu() {
   const [selectedCategory, setSelectedCategory] = useState("Pizza");
-
+  const [hoverButton, setHoverButton] = useState(false);
   // Fonction pour changer la catégorie
   const handleClick = (category) => {
     setSelectedCategory(category);
   };
-const categories = ["Pizza", "Tacos", "Salades", "Boissons", "Desserts", "Supplements"];
+  const categories = [
+    "Pizza",
+    "Tacos",
+    "Salades",
+    "Boissons",
+    "Desserts",
+    "Supplements",
+  ];
   return (
     <div>
       {/* Menu de sélection */}
@@ -21,7 +28,9 @@ const categories = ["Pizza", "Tacos", "Salades", "Boissons", "Desserts", "Supple
         {categories.map((category) => (
           <div
             key={category}
-            className={`mx-4 px-3 py-2 ${selectedCategory === category ? "bg-dark rounded" : ""}`}
+            className={`mx-4 px-3 py-2 ${
+              selectedCategory === category ? "bg-dark rounded" : ""
+            }`}
             style={{ cursor: "pointer" }}
             onClick={() => handleClick(category)}
           >
@@ -56,8 +65,11 @@ const categories = ["Pizza", "Tacos", "Salades", "Boissons", "Desserts", "Supple
                       <span>10 Є</span>
                     </p>
                   </div>
-                  <div className="card-footer bg-success">
-                    <small className="text-white fs-5">Commander</small>
+                  <div className={`card-footer ${hoverButton ? "bg-success" : "bg-warning"}`}
+                  onMouseEnter={()=>setHoverButton(true)}
+                  onMouseLeave={()=>setHoverButton(false)}
+                  >
+                    <small className="text-white h5">Commander</small>
                   </div>
                 </div>
               </div>

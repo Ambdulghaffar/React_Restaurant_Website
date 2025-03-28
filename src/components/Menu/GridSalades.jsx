@@ -12,11 +12,11 @@ function GridSalades() {
         <div class="row row-cols-2">
           <Grid
             Pizza={S1}
-            NamePizza="Margherita Pizza"
+            NamePizza="Salades Marocaines"
             NamePizzaStyle={{
               fontSize: "20px",
             }}
-            NewPrice="25 Є"
+            NewPrice="25"
             NewPriceStyle={{
               marginLeft: "90px",
             }}
@@ -25,11 +25,11 @@ function GridSalades() {
           />
           <Grid
             Pizza={S2}
-            NamePizza="Mushroom Pizza"
+            NamePizza="Salades Simple"
             NamePizzaStyle={{
               fontSize: "20px",
             }}
-            NewPrice="15 Є"
+            NewPrice="15"
             NewPriceStyle={{
               marginLeft: "90px",
             }}
@@ -38,11 +38,11 @@ function GridSalades() {
           />
           <Grid
             Pizza={S3}
-            NamePizza="Hawaiian Pizza"
+            NamePizza="Salades Composées"
             NamePizzaStyle={{
               fontSize: "20px",
             }}
-            NewPrice="24 Є "
+            NewPrice="24 "
             NewPriceStyle={{
               marginLeft: "90px",
             }}
@@ -51,7 +51,7 @@ function GridSalades() {
           />
           <Grid
             Pizza={S4}
-            NamePizza="Pesto Pizza"
+            NamePizza="Salades de pâtes"
             NamePizzaStyle={{
               fontSize: "20px",
             }}

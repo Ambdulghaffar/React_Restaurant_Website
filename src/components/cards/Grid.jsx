@@ -11,67 +11,68 @@ function Grid({
   NewPrice,
   NewPriceStyle,
   whiteStars,
-  yellowStars,
-  showbutton = true,
+  yellowStars
 }) {
+  const [hoverButton,setHoverButton]=useState(false);
   const [hoverGrid, setHoverGrid] = useState(false);
   return (
-    <div className="position-relative my-3">
+    <div className="position-relative my-2">
       <div
-        class="col"
+        className="col"
         onMouseEnter={() => setHoverGrid(true)}
         onMouseLeave={() => setHoverGrid(false)}
       >
         <div
-          className="card h-100"
+          className="card"
           style={{
-            transform: hoverGrid ? "translateY(10px)" : "",
+            transform: hoverGrid ? "scale(1.1)" : "scale(1)",
             transition: "transform 0.3s ease-in-out",
+            cursor: "pointer",
           }}
         >
-          <p className="text-center mt-5 ">
+          <div className="text-center mt-3">
             <img
               src={Pizza}
               style={{
                 ...PizzaStyle,
                 objectFit: "cover",
-                width: "250px",
-                height: "230px",
+                width: "200px",
+                height: "180px",
                 borderRadius: "10px",
                 boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
               }}
               alt=""
             />
-          </p>
+          </div>
 
-          <div className="card-body ms-4">
-            <h5 className="card-titlel">
+          <div className="card-body ms-3 py-2">
+            <h5 className="card-titlel mb-1">
               {[...Array(yellowStars)].map((_, i) => (
                 <FaStar key={i} className="text-warning" />
               ))}
-              {/*   Cette syntaxe crée un tableau de longueur yellowStars et mappe chaque élément pour afficher une étoile jaune.  */}
-
               {[...Array(whiteStars)].map((_, i) => (
                 <FaRegStar key={i} />
               ))}
             </h5>
-            <p className="card-text " style={{ ...NamePizzaStyle }}>
+            <p className="card-text mb-1" style={{ ...NamePizzaStyle }}>
               {NamePizza}
             </p>
-            <div className="d-flex ">
-              <p className=" text-secondary text-decoration-line-through">
-                {OldPrice}
+            <div className="d-flex">
+              <p className="text-secondary text-decoration-line-through mb-1 me-2">
+                {OldPrice} 
               </p>
-              <p className=" text-info" style={{ ...NewPriceStyle }}>
-                {NewPrice}
+              <p className="text-info mb-1" style={{ ...NewPriceStyle }}>
+                {NewPrice} Є
               </p>
             </div>
           </div>
-          {showbutton && (
-            <div className="card-footer bg-success">
-              <small className="text-white fs-5">Ajouter au panier</small>
-            </div>
-          )}
+
+          <div className={`card-footer text-center ${hoverButton ? "bg-success" : "bg-warning"} py-1`}
+          onMouseEnter={()=>setHoverButton(true)}
+          onMouseLeave={()=>setHoverButton(false)}
+          >
+            <small className="text-white h5">Ajouter au panier</small>
+          </div>
         </div>
       </div>
     </div>

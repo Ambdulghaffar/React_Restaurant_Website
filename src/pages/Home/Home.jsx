@@ -85,35 +85,30 @@ function Home() {
             <Grid
               Pizza={pizza4}
               NamePizza="Margherita Pizza"
-              NewPrice="$24.00"
+              NewPrice="24.00"
               yellowStars={4}
               whiteStars={1}
-              showbutton={false}
             />
             <Grid
               Pizza={pizza5}
               NamePizza="Mushroom Pizza"
-              NewPrice="$24.00"
+              NewPrice="24.00"
               yellowStars={5}
               whiteStars={0}
-              showbutton={false}
             />
             <Grid
               Pizza={pizza6}
               NamePizza="Hawaiian Pizza"
-              NewPrice="$24.00 "
+              NewPrice="24.00 "
               yellowStars={5}
               whiteStars={0}
-              showbutton={false}
             />
             <Grid
               Pizza={pizza7}
               NamePizza="Pesto Pizza"
-              NewPrice="$24.00"
-              OldPrice="$40.00"
+              NewPrice="24.00"
               yellowStars={4}
               whiteStars={1}
-              showbutton={false}
             />
           </div>
         </div>
