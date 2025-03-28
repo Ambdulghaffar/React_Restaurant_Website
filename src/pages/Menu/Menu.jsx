@@ -1,14 +1,14 @@
 import React from "react";
 import BannerZoom from "../../components/cards/BannerZoom";
 import Footer from "../../components/header/Footer";
-import GirdMenu from "../../components/Menu/GirdMenu";
+import GridMenu from "../../components/Menu/GridMenu";
 
 function Menu() {
   return (
     <>
       <BannerZoom title="Notre Menu" />
-      <GirdMenu/>
-      <Footer/>
+      <GridMenu />
+      <Footer />
     </>
   );
 }

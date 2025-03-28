@@ -1,17 +1,16 @@
 import React from "react";
-import Grid from "../../components/cards/Grid";
-import pizza4 from "../../assets/pizza4.jpg";
-import pizza5 from "../../assets/pizza5.jpg";
-import pizza6 from "../../assets/pizza6.jpg";
-import pizza7 from "../../assets/pizza7.jpg";
+import S1 from "../../assets/Photo_menu/S1.jpg";
+import S2 from "../../assets/Photo_menu/S2.jpg";
+import S3 from "../../assets/Photo_menu/S3.jpg";
+import S4 from "../../assets/Photo_menu/S4.jpg";
 
-function GirdPizza() {
+function GridSalades() {
   return (
     <div>
       <div class="container text-center">
         <div class="row row-cols-2">
           <Grid
-            Pizza={pizza4}
+            Pizza={S1}
             NamePizza="Margherita Pizza"
             NamePizzaStyle={{
               fontSize: "20px",
@@ -24,7 +23,7 @@ function GirdPizza() {
             whiteStars={0}
           />
           <Grid
-            Pizza={pizza5}
+            Pizza={S2}
             NamePizza="Mushroom Pizza"
             NamePizzaStyle={{
               fontSize: "20px",
@@ -37,7 +36,7 @@ function GirdPizza() {
             whiteStars={0}
           />
           <Grid
-            Pizza={pizza6}
+            Pizza={S3}
             NamePizza="Hawaiian Pizza"
             NamePizzaStyle={{
               fontSize: "20px",
@@ -50,7 +49,7 @@ function GirdPizza() {
             whiteStars={0}
           />
           <Grid
-            Pizza={pizza7}
+            Pizza={S4}
             NamePizza="Pesto Pizza"
             NamePizzaStyle={{
               fontSize: "20px",
@@ -68,4 +67,4 @@ function GirdPizza() {
   );
 }
 
-export default GirdPizza;
+export default GridSalades;
