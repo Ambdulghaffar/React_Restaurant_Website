@@ -9,14 +9,14 @@ import { FaSquareInstagram } from "react-icons/fa6";
 function Hoverlink({href,children}) {
   const [hover, setHover] = useState(false);
   return (
-    <a
+    <span
       href={href}
       className={`text-decoration-none ${hover ? "text-warning" : "text-white"}`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
       {children}
-    </a>
+    </span>
   );
 }
 
@@ -24,9 +24,9 @@ function Hoverlink({href,children}) {
 function Footer() {
   return (
     <div className="bg-dark text-white">
-      <div class="container">
-        <div class="row">
-          <div class="col my-5">
+      <div className="container">
+        <div className="row">
+          <div className="col my-5">
             <p className="fs-3 fw-bold">Ce qu'on offre</p>
             <div className="d-flex">
               <div className="me-5">
@@ -41,7 +41,7 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div class="col my-5">
+          <div className="col my-5">
             <p className="fs-3 fw-bold">Liens</p>
             <div>
             <p><Hoverlink href="">Acceuil</Hoverlink></p>
@@ -49,7 +49,7 @@ function Footer() {
             <p><Hoverlink href="">Contacts</Hoverlink></p>
             </div>
           </div>
-          <div class="col my-5">
+          <div className="col my-5">
             <p className="fs-3 fw-bold">Contacts</p>
             <p>
               <FaPhone className="me-4 fs-5" />

@@ -24,7 +24,7 @@ function Cards({
         {shomotion ? (
           <motion.img
             src={img}
-            class="card-img"
+            className="card-img"
             alt={alt}
             style={{ height: "700px", objectFit: "cover", ...cardImgStyle }}
             animate={{ scale: [1, 0.99, 1] }} //Fait un zoom progressif de 1 à 1.1 puis revient à 1.
@@ -33,28 +33,28 @@ function Cards({
         ) : (
           <img
             src={img}
-            class="card-img"
+            className="card-img"
             alt={alt}
             style={{ height: "700px", objectFit: "cover", ...cardImgStyle }}
           />
         )}
         <div
-          class="card-img-overlay"
+          className="card-img-overlay"
           style={{ marginTop: " 60px ", marginLeft: "100px", ...cardBodyStyle }}
         >
           <h5
-            class="card-title fw-bold"
+            className="card-title fw-bold"
             style={{ fontSize: "120px", ...cardTitleStyle }}
           >
             {cardtitle1} <br /> {cardtitle2}
           </h5>
           <p
-            class="card-text mt-5 mb-5 fw-bold fw-lighter"
+            className="card-text mt-5 mb-5 fw-bold fw-lighter"
             style={{ ...cardstyletext1 }}
           >
             {cardtext1} <br /> {cardtext2}
           </p>
-          <p class="card-text">
+          <div className="card-text">
             <small>
               <ButtonCards
                 showbutton={showbutton}
@@ -62,7 +62,7 @@ function Cards({
                 cardstylebutton={cardstylebutton}
               />
             </small>
-          </p>
+          </div>
         </div>
       </div>
     </div>

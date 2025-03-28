@@ -6,6 +6,7 @@ function Grid({
   NamePizza,
   NamePizzaStyle,
   Pizza,
+  PizzaStyle,
   OldPrice,
   NewPrice,
   NewPriceStyle,
@@ -22,22 +23,29 @@ function Grid({
         onMouseLeave={() => setHoverGrid(false)}
       >
         <div
-          class="card h-100"
+          className="card h-100"
           style={{
-            opacithy: hoverGrid ? "0.10" : "1",
-            transitionj: "opacity 0.3s ease-in-out",
+            transform: hoverGrid ? "translateY(10px)" : "",
+            transition: "transform 0.3s ease-in-out",
           }}
         >
           <p className="text-center mt-5 ">
             <img
               src={Pizza}
-              style={{ width: "200px", height: "auto" }}
+              style={{
+                ...PizzaStyle,
+                objectFit: "cover",
+                width: "250px",
+                height: "230px",
+                borderRadius: "10px",
+                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+              }}
               alt=""
             />
           </p>
 
-          <div class="card-body ms-4">
-            <h5 class="card-titlel">
+          <div className="card-body ms-4">
+            <h5 className="card-titlel">
               {[...Array(yellowStars)].map((_, i) => (
                 <FaStar key={i} className="text-warning" />
               ))}
@@ -47,19 +55,23 @@ function Grid({
                 <FaRegStar key={i} />
               ))}
             </h5>
-            <p class="card-text " style={{...NamePizzaStyle}}>{NamePizza}</p>
+            <p className="card-text " style={{ ...NamePizzaStyle }}>
+              {NamePizza}
+            </p>
             <div className="d-flex ">
               <p className=" text-secondary text-decoration-line-through">
                 {OldPrice}
               </p>
-              <p className=" text-info" style={{...NewPriceStyle}}>{NewPrice}</p>
+              <p className=" text-info" style={{ ...NewPriceStyle }}>
+                {NewPrice}
+              </p>
             </div>
           </div>
           {showbutton && (
-              <div className="card-footer bg-success">
-                <small className="text-white fs-5">Ajouter au panier</small>
-              </div>
-            )}
+            <div className="card-footer bg-success">
+              <small className="text-white fs-5">Ajouter au panier</small>
+            </div>
+          )}
         </div>
       </div>
     </div>

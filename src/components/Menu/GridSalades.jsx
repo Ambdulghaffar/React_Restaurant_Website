@@ -3,6 +3,7 @@ import S1 from "../../assets/Photo_menu/S1.jpg";
 import S2 from "../../assets/Photo_menu/S2.jpg";
 import S3 from "../../assets/Photo_menu/S3.jpg";
 import S4 from "../../assets/Photo_menu/S4.jpg";
+import Grid from "../cards/Grid";
 
 function GridSalades() {
   return (
