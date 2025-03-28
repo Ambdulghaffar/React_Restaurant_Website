@@ -16,7 +16,7 @@ function Header() {
           <Link className="nav-link active fs-5 fw-bold" aria-current="page" to="/">Accueil</Link>
         </li>
         <li class="nav-item pe-4 fs-5">
-          <Link className="nav-link fs-5 fw-bold" to="/about">Menu</Link>
+          <Link className="nav-link fs-5 fw-bold" to="/menu">Menu</Link>
         </li>
         <li class="nav-item pe-4 fs-5">
           <Link className="nav-link fs-5 fw-bold" to="/typography">Commandes</Link>

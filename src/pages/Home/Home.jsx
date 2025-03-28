@@ -5,7 +5,7 @@ import burger from "../../assets/burger.jpg";
 import pizza3 from "../../assets/pizza3.jpg";
 import dessert from "../../assets/dessert.jpg";
 import drinks from "../../assets/drinks.jpg";
-import seafood from "../../assets/tacos.jpg";
+import tacos from "../../assets/tacos.jpg";
 import Column from "../../components/cards/Column";
 import Cards from "../../components/cards/Cards";
 import banner1 from "../../assets/banner1.jpg";
@@ -19,6 +19,7 @@ import { LuLeaf } from "react-icons/lu";
 import { PiHamburgerBold } from "react-icons/pi";
 import { CiIceCream } from "react-icons/ci";
 import { TbMeat } from "react-icons/tb";
+import { GiTacos } from "react-icons/gi";
 import Footer from "../../components/header/Footer";
 
 
@@ -50,7 +51,7 @@ function Home() {
               icon={<i class="bi bi-cup-straw"></i>}
               name="Drinks"
             />
-            <Column img={seafood} icon={<TbMeat />} name="Tacos" />
+            <Column img={tacos} icon={<GiTacos />} name="Tacos" />
           </div>
         </div>
         <Cards
