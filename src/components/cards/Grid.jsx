@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa6";
 import { FaRegStar } from "react-icons/fa";
-import { useCart } from "../Menu/useCart";
 
 function Grid({
   NamePizza,
@@ -12,21 +11,10 @@ function Grid({
   NewPrice,
   NewPriceStyle,
   whiteStars,
-  yellowStars,
+  yellowStars
 }) {
-  const [hoverButton, setHoverButton] = useState(false);
+  const [hoverButton,setHoverButton]=useState(false);
   const [hoverGrid, setHoverGrid] = useState(false);
-
-  const { addToCart } = useCart;
-
-  // Ajouter au panier
-  const handleAddCart = () => {
-    addToCart({
-      name: NamePizza,
-      price: NewPrice,
-      image: Pizza,
-    });
-  };
   return (
     <div className="position-relative my-2">
       <div
@@ -71,7 +59,7 @@ function Grid({
             </p>
             <div className="d-flex">
               <p className="text-secondary text-decoration-line-through mb-1 me-2">
-                {OldPrice}
+                {OldPrice} 
               </p>
               <p className="text-info mb-1" style={{ ...NewPriceStyle }}>
                 {NewPrice} Є
@@ -79,14 +67,9 @@ function Grid({
             </div>
           </div>
 
-          <div
-            className={`card-footer text-center ${
-              hoverButton ? "bg-success" : "bg-warning"
-            } py-1`}
-            onClick={handleAddCart}
-            style={{ cursor:"pointer" }}
-            onMouseEnter={() => setHoverButton(true)}
-            onMouseLeave={() => setHoverButton(false)}
+          <div className={`card-footer text-center ${hoverButton ? "bg-success" : "bg-warning"} py-1`}
+          onMouseEnter={()=>setHoverButton(true)}
+          onMouseLeave={()=>setHoverButton(false)}
           >
             <small className="text-white h5">Ajouter au panier</small>
           </div>

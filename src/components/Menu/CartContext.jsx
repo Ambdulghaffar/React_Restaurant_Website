@@ -1,27 +1,36 @@
-import { createContext, useState } from "react";
+import React, { createContext, useState, useContext } from "react";
 
-// Création du contexte
-export const CartContext = createContext(null);
+// Crée le contexte
+const CartContext = createContext();
 
 // Fournisseur du contexte
-export const CartProvider = ({ children }) => {  
-  const [cartItems, setCartItems] = useState([]);
-
-  const addToCart = (item) => {
-    setCartItems((prevItems) => [...prevItems, item]);
+export const CartProvider = ({ children }) => {
+  const [cart, setCart] = useState([]);
+  
+  // Ajouter un produit au panier
+  const addToCart = (name, price) => {
+    setCart([...cart, { name, price }]);
   };
 
+  // Supprimer un produit du panier
   const removeFromCart = (index) => {
-    setCartItems((prevItems) => prevItems.filter((_, i) => i !== index));
+    const newCart = cart.filter((item, idx) => idx !== index);
+    setCart(newCart);
   };
 
-  const getTotalPrice = () => {
-    return cartItems.reduce((total, item) => total + item.price, 0);
+  // Calculer le total du panier
+  const getTotal = () => {
+    return cart.reduce((acc, item) => acc + parseFloat(item.price), 0);
   };
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, getTotalPrice }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, getTotal }}>
       {children}
     </CartContext.Provider>
   );
+};
+
+// Hook pour utiliser le contexte dans d'autres composants
+export const useCart = () => {
+  return useContext(CartContext);
 };
