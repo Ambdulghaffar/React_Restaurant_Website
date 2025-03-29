@@ -5,10 +5,14 @@ import GridSalades from "./GridSalades";
 import GridBoissons from "./GridBoissons";
 import GridDesserts from "./GridDesserts";
 import GridSupplements from "./GridSupplements";
+import { FaTrash } from "react-icons/fa";
+import { useCart } from "./useCart";
 
 function GridMenu() {
   const [selectedCategory, setSelectedCategory] = useState("Pizza");
   const [hoverButton, setHoverButton] = useState(false);
+  const { cartItems, removeFromCart, getTotalPrice } = useCart();
+
   // Fonction pour changer la catégorie
   const handleClick = (category) => {
     setSelectedCategory(category);
@@ -60,14 +64,52 @@ function GridMenu() {
                   <div className="card-body">
                     <h5 className="card-title">Votre panier</h5>
                     <hr />
-                    <p className="card-text d-flex justify-content-between">
-                      <span>Pizza normal</span>
-                      <span>10 Є</span>
-                    </p>
+                    {cartItems.length === 0 ? (
+                      <p className="text-center text-muted">
+                        Votre panier est vide
+                      </p>
+                    ) : (
+                      <div
+                        className="cart-items"
+                        style={{ maxHeight: "250px", overflowY: "auto" }}
+                      >
+                        {cartItems.map((item, index) => (
+                          <div
+                            key={index}
+                            className="card-text d-flex justify-content-between align-items-center mb-2"
+                          >
+                            <span>{item.name}</span>
+                            <div className="d-flex align-items-center">
+                              <span className="me-2">{item.price} €</span>
+                              <button
+                                className="btn btn-sm btn-outline-danger"
+                                onClick={() => removeFromCart(index)}
+                              >
+                                <FaTrash size={12} />
+                              </button>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    {cartItems.length > 0 && (
+                      <div className="mt-3 border-top pt-2">
+                        <div className="d-flex justify-content-between fw-bold">
+                          <span>Total:</span>
+                          <span>{getTotalPrice().toFixed(2)} €</span>
+                        </div>
+                      </div>
+                    )}
                   </div>
-                  <div className={`card-footer ${hoverButton ? "bg-success" : "bg-warning"}`}
-                  onMouseEnter={()=>setHoverButton(true)}
-                  onMouseLeave={()=>setHoverButton(false)}
+                  <div
+                    className={`card-footer ${
+                      hoverButton ? "bg-success" : "bg-warning"
+                    }`}
+                    style={{
+                      cursor: cartItems.length > 0 ? "pointer" : "not-allowed",
+                    }}
+                    onMouseEnter={() => setHoverButton(true)}
+                    onMouseLeave={() => setHoverButton(false)}
                   >
                     <small className="text-white h5">Commander</small>
                   </div>
