@@ -75,6 +75,7 @@ function GridMenu() {
                           <span
                             className="text-danger"
                             onClick={() => removeFromCart(item.name)}
+                            style={{cursor:"pointer"}}
                           >
                             <FaTrash size={12} />
                           </span>
@@ -95,7 +96,7 @@ function GridMenu() {
                     onMouseLeave={() => setHoverButton(false)}
                   >
                     <small className="text-white h5">
-                      Commander : {total} Є
+                      Commander - {total} Є
                     </small>
                   </div>
                 </div>

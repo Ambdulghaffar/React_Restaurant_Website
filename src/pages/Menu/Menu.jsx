@@ -8,9 +8,7 @@ function Menu() {
   return (
     <>
       <BannerZoom title="Notre Menu" />
-      <CartProvider>
         <GridMenu />
-      </CartProvider>
       <Footer />
     </>
   );

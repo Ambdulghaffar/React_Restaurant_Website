@@ -55,7 +55,7 @@ function GridSalades() {
             NamePizzaStyle={{
               fontSize: "20px",
             }}
-            NewPrice="30 Є"
+            NewPrice="30 "
             NewPriceStyle={{
               marginLeft: "90px",
             }}
