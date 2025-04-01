@@ -19,7 +19,7 @@ function Header() {
           <Link className="nav-link fs-5 fw-bold" to="/menu">Menu</Link>
         </li>
         <li class="nav-item pe-4 fs-5">
-          <Link className="nav-link fs-5 fw-bold" to="/typography">Commandes</Link>
+          <Link className="nav-link fs-5 fw-bold" to="/commandes">Commandes</Link>
         </li>
         <li class="nav-item pe-4 fs-5 fs-5 fw-bold">
           <Link className="nav-link" to="/contacts">Contacts</Link>
