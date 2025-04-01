@@ -1,6 +1,6 @@
 import BannerZoom from "../../components/cards/BannerZoom";
 import Cart from "../../components/Menu/Cart";
-import Footer from "../../components/header/Footer";
+import Footer from "../../components/body/Footer";
 
 function Commandes() {
   return (

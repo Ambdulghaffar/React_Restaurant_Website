@@ -21,9 +21,6 @@ function Header() {
         <li class="nav-item pe-4 fs-5">
           <Link className="nav-link fs-5 fw-bold" to="/commandes">Commandes</Link>
         </li>
-        <li class="nav-item pe-4 fs-5 fs-5 fw-bold">
-          <Link className="nav-link" to="/contacts">Contacts</Link>
-        </li>
       </ul>
     </div>
   </div>

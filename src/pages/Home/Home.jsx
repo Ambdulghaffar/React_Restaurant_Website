@@ -18,7 +18,7 @@ import { LuLeaf } from "react-icons/lu";
 import { PiHamburgerBold } from "react-icons/pi";
 import { CiIceCream } from "react-icons/ci";
 import { GiTacos } from "react-icons/gi";
-import Footer from "../../components/header/Footer";
+import Footer from "../../components/body/Footer";
 import Banner from "../../components/cards/Banner";
 
 function Home() {
@@ -54,16 +54,17 @@ function Home() {
         <Cards
           shomotion={false}
           img={banner1}
-          cardtitle1="Best atmosphere"
-          cardtext1="PizzaHouse is the place of the best"
-          cardtext2="pizza and high-quality service."
-          cardbutton="View our Services"
-          cardstylebutton={{ marginRight: "155px" }}
+          cardtitle1="Meilleure ambiance"
+          cardtext1="PizzaHouse est l'endroit où vous trouverez la "
+          cardtext2="meilleure Pizza et un service de haute qualité."
+          cardbutton="Voir notre Menu"
+          cardstylebutton={{ marginRight: "250px" }}
           cardstyletext1={{
-            marginRight: "150px",
+            marginRight: "120px",
             fontFamily: "serif",
-            fontSize: "19px",
+            fontSize: "20px",
           }}
+      
           cardstyle={{ marginBottom: "30px" }}
           cardImgStyle={{
             height: "400px",
