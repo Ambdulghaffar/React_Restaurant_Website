@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useState, useContext, useEffect } from "react";
 
 // Crée le contexte
 const CartContext = createContext();
@@ -6,25 +6,27 @@ const CartContext = createContext();
 // Fournisseur du contexte
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  
+  const [total, setTotal] = useState(0);
+
   // Ajouter un produit au panier
   const addToCart = (name, price) => {
-    setCart([...cart, { name, price }]);
+    setCart(prevCart => [...prevCart, { name, price }]);
   };
 
-  // Supprimer un produit du panier
-  const removeFromCart = (index) => {
-    const newCart = cart.filter((item, idx) => idx !== index);
-    setCart(newCart);
+  // Supprimer un produit du panier (par nom au lieu d'index)
+  const removeFromCart = (name) => {
+    setCart(prevCart => prevCart.filter(item => item.name !== name));
   };
 
   // Calculer le total du panier
-  const getTotal = () => {
-    return cart.reduce((acc, item) => acc + parseFloat(item.price), 0);
-  };
+  useEffect(() => {
+    setTotal(cart.reduce((acc, item) => acc + parseFloat(item.price), 0));
+  }, [cart]);
+
+
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, getTotal }}>
+    <CartContext.Provider value={{ cart, total, addToCart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );
