@@ -9,7 +9,7 @@ function Cart({ cartTitle, cartButton }) {
     <>
       <div className="row">
         <div className="col" style={{ height: "400px" }}>
-          <div className="card h-100 bg-secondary-subtle">
+          <div className="card h-100 bg-secondary-subtle"  style={{maxHeight: "1000px", overflowY: "auto" }}>
             {cart.length > 0 ? (
               <div className="card-body">
                 <h5 className="card-title">{cartTitle}</h5>
@@ -18,6 +18,7 @@ function Cart({ cartTitle, cartButton }) {
                   <p
                     key={index}
                     className="card-text d-flex justify-content-between"
+                    
                   >
                     <span>{item.name}</span>
                     <span>{item.price} Є</span>
@@ -45,7 +46,7 @@ function Cart({ cartTitle, cartButton }) {
               onMouseEnter={() => setHoverButton(true)}
               onMouseLeave={() => setHoverButton(false)}
             >
-              <small className="text-white h5">
+            <small className="text-white h5" style={{cursor:"pointer"}}>
                 {cartButton} - {total} Є
               </small>
             </div>

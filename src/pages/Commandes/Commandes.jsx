@@ -1,5 +1,6 @@
 import BannerZoom from "../../components/cards/BannerZoom";
 import Cart from "../../components/Menu/Cart";
+import Footer from "../../components/header/Footer";
 
 function Commandes() {
   return (
@@ -23,7 +24,7 @@ function Commandes() {
                     <label for="name" className="form-label">
                       Nom Complet
                     </label>
-                    <input type="text" className="form-control bg-secondary-subtle" id="came" />
+                    <input type="text" className="form-control bg-secondary-subtle" id="name" />
                   </div>
                   <div className="mb-3 ">
                     <label for="address" className="form-label">
@@ -43,7 +44,7 @@ function Commandes() {
 
             {/* Panier */}
             <div className="col"></div>
-            <div className="col-4">
+            <div className="col-4 text-center">
               <Cart
                 cartTitle="Récapitulatif"
                 cartButton="Confirmer la commande"
@@ -52,6 +53,7 @@ function Commandes() {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }
