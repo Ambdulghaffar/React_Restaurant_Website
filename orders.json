@@ -1,0 +1,34 @@
+[
+  {
+    "name": "AMBDULGHAFFAR",
+    "address": " TÉTOUAN",
+    "phone": "0632888924",
+    "cart": [
+      {
+        "name": "Salades Simple",
+        "price": "15"
+      },
+      {
+        "name": "Crème dessert",
+        "price": "7"
+      },
+      {
+        "name": "Riz pilaf",
+        "price": "10"
+      },
+      {
+        "name": "Frites",
+        "price": "5"
+      },
+      {
+        "name": "Margherita Pizza",
+        "price": "25"
+      },
+      {
+        "name": "Mushroom Pizza",
+        "price": "15"
+      }
+    ],
+    "orderDate": "2025-04-04T22:03:19.112Z"
+  }
+]

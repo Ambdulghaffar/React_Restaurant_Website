@@ -5,7 +5,7 @@ import { useCart } from "./CartContext";
 const CommandesContext = React.createContext();
 
 export const FormProvider = ({ children }) => {
-  const { cart, clearCart } = useCart(); // Utiliser le hook useCart pour obtenir cart et clearCart
+  const { cart, clearCart } = useCart(); 
 
   const [formData, setFormData] = useState(() => {
     const savedFormData = localStorage.getItem("formData");
