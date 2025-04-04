@@ -7,11 +7,11 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-function Hoverlink({ href, children }) {
+function Hoverlink({ to, children }) {
   const [hover, setHover] = useState(false);
   return (
     <Link
-      href={href}
+      to={to}
       className={`text-decoration-none ${
         hover ? "text-warning" : "text-white"
       }`}
@@ -65,7 +65,7 @@ function Footer() {
                 <Hoverlink to="/menu">Menu</Hoverlink>
               </p>
               <p>
-                <Hoverlink to="/commandes">Contacts</Hoverlink>
+                <Hoverlink to="/commandes">Commandes</Hoverlink>
               </p>
             </div>
           </div>
@@ -73,21 +73,21 @@ function Footer() {
             <p className="fs-3 fw-bold">Contacts</p>
             <p>
               <FaPhone className="me-4 fs-5" />
-              <a href="" className="text-decoration-none text-white">
+              <Link to="tel:0647890345" className="text-decoration-none text-white">
                 <Hoverlink>0647890345</Hoverlink>
-              </a>
+              </Link>
             </p>
             <p>
               <MdEmail className="me-4 fs-5" />
-              <a href="#" className="text-decoration-none text-white">
+              <Link to="mailto:pizzahouse@email.com" className="text-decoration-none text-white">
                 <Hoverlink>pizzahouse@email.com</Hoverlink>
-              </a>
+              </Link>
             </p>
             <p>
               <GiPositionMarker className="me-4 fs-5" />
-              <a href="" className="text-decoration-none text-white">
+              <Link to="https://www.google.com/maps?q=75,bd+Ibn+Tachfine" className="text-decoration-none text-white">
                 <Hoverlink>75, bd Ibn Tachfine</Hoverlink>
-              </a>
+              </Link>
             </p>
           </div>
           <div className="text-center mb-5 d-flex justify-content-center align-items-center">
@@ -108,7 +108,7 @@ function Footer() {
   function HoverIcon({ Icon }) {
     const [hoverIcon, setHoverIcon] = useState(false);
     return (
-      <a href="">
+      <Link to="">
         <p
           className={`ms-4 fs-4 ${hoverIcon ? "text-info" : "text-white"}`}
           onMouseEnter={() => setHoverIcon(true)}
@@ -116,7 +116,7 @@ function Footer() {
         >
           {Icon}
         </p>
-      </a>
+      </Link>
     );
   }
 }
