@@ -36,8 +36,8 @@ function Cart({ cartTitle, cartButton, onConfirm }) {
               </div>
             ) : (
               <div>
-                <h5 className="card-title my-3">{cartTitle}</h5>
-                <p>Votre panier est vide.</p>
+                <h5 className="card-title my-3 merriweather">{cartTitle}</h5>
+                <p className="playfair">Votre panier est vide.</p>
               </div>
             )}
             <Button cartButton={cartButton} onConfirm={onConfirm} />
@@ -61,14 +61,14 @@ function Cart({ cartTitle, cartButton, onConfirm }) {
       >
         {location.pathname === "/commandes" ? (
           <small
-            className="text-white h5"
+            className="text-white rubik h5"
             onClick={location.pathname === "/commandes" ? onConfirm : undefined}
           >
             {cartButton} - {total} Є
           </small>
         ) : (
           <Link to="/commandes" className="text-decoration-none">
-            <small className="text-white h5">
+            <small className="text-white h5 rubik">
               {cartButton} - {total} Є
             </small>
           </Link>

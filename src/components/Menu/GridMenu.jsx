@@ -30,7 +30,7 @@ function GridMenu() {
         {categories.map((category) => (
           <div
             key={category}
-            className={`mx-4 px-3 py-2 ${
+            className={`mx-4 px-3 py-2 merriweather ${
               selectedCategory === category ? "bg-dark rounded" : ""
             }`}
             style={{ cursor: "pointer" }}

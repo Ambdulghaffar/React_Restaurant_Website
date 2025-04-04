@@ -71,7 +71,7 @@ function Commandes() {
               <div className="m-5 border border-2 bg-white p-5">
                 <form>
                   <div className="mb-3">
-                    <label for="name" className="form-label">
+                    <label for="name" className="form-label playfairl merriweather">
                       Nom Complet
                     </label>
                     <input
@@ -83,7 +83,7 @@ function Commandes() {
                     />
                   </div>
                   <div className="mb-3 ">
-                    <label for="address" className="form-label">
+                    <label for="address" className="form-label playfairl merriweather">
                       Adresse
                     </label>
                     <input
@@ -95,7 +95,7 @@ function Commandes() {
                     />
                   </div>
                   <div className="mb-3">
-                    <label for="phone" className="form-label">
+                    <label for="phone" className="form-label playfairl merriweather">
                       Téléphone
                     </label>
                     <input
