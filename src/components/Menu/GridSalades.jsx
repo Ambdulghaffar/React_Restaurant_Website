@@ -37,7 +37,7 @@ function GridSalades() {
   return (
     <div>
       <div className="container text-center">
-        <div className="row row-cols-2">
+        <div className="row row-cols-lg-2  row-cols-sm-1">
           {salades.map((salade) => (
             <Grid
               key={salade.id}

@@ -16,7 +16,7 @@ function GridDesserts() {
   return (
     <div>
       <div class="container text-center">
-        <div class="row row-cols-2">
+        <div class="row row-cols-lg-2  row-cols-sm-1">
           {desserts.map((dessert) => (
             <Grid
               key={dessert.id}

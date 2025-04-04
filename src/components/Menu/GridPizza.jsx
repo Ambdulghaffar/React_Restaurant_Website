@@ -6,62 +6,53 @@ import pizza6 from "../../assets/pizza6.jpg";
 import pizza7 from "../../assets/pizza7.jpg";
 
 function GridPizza() {
+  const pizzas = [
+    {
+      id: 1,
+      image: pizza4,
+      name: "Margherita Pizza",
+      price: "25",
+    },
+    {
+      id: 2,
+      image: pizza5,
+      name: "Mushroom Pizza",
+      price: "15",
+    },
+    {
+      id: 3,
+      image: pizza6,
+      name: "Hawaiian Pizza",
+      price: "24",
+    },
+    {
+      id: 4,
+      image: pizza7,
+      name: "Pesto Pizza",
+      price: "30",
+    },
+  ];
+
   return (
     <div>
-      <div class="container text-center">
-        <div class="row row-cols-2">
-          <Grid
-            Pizza={pizza4}
-            NamePizza="Margherita Pizza"
-            NamePizzaStyle={{
-              fontSize: "20px",
-            }}
-            NewPrice="25 "
-            NewPriceStyle={{
-              marginLeft: "90px",
-            }}
-            yellowStars={0}
-            whiteStars={0}
-          />
-          <Grid
-            Pizza={pizza5}
-            NamePizza="Mushroom Pizza"
-            NamePizzaStyle={{
-              fontSize: "20px",
-            }}
-            NewPrice="15 "
-            NewPriceStyle={{
-              marginLeft: "90px",
-            }}
-            yellowStars={0}
-            whiteStars={0}
-          />
-          <Grid
-            Pizza={pizza6}
-            NamePizza="Hawaiian Pizza"
-            NamePizzaStyle={{
-              fontSize: "20px",
-            }}
-            NewPrice="24  "
-            NewPriceStyle={{
-              marginLeft: "90px",
-            }}
-            yellowStars={0}
-            whiteStars={0}
-          />
-          <Grid
-            Pizza={pizza7}
-            NamePizza="Pesto Pizza"
-            NamePizzaStyle={{
-              fontSize: "20px",
-            }}
-            NewPrice="30 "
-            NewPriceStyle={{
-              marginLeft: "90px",
-            }}
-            yellowStars={0}
-            whiteStars={0}
-          />
+      <div className="container text-center">
+        <div className="row row-cols-lg-2  row-cols-sm-1">
+          {pizzas.map((pizza) => (
+            <Grid
+              key={pizza.id}
+              Pizza={pizza.image}
+              NamePizza={pizza.name}
+              NamePizzaStyle={{
+                fontSize: "20px",
+              }}
+              NewPrice={pizza.price}
+              NewPriceStyle={{
+                marginLeft: "90px",
+              }}
+              yellowStars={0}
+              whiteStars={0}
+            />
+          ))}
         </div>
       </div>
     </div>

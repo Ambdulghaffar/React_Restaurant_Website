@@ -5,64 +5,54 @@ import B2 from "../../assets/Photo_menu/B2.jpg";
 import B3 from "../../assets/Photo_menu/B3.jpg";
 import B4 from "../../assets/Photo_menu/B4.jpg";
 
-
 function GridBoissons() {
+  const boissons = [
+    {
+      id: 1,
+      image: B1,
+      name: "Jus Naturel",
+      price: "25",
+    },
+    {
+      id: 2,
+      image: B2,
+      name: "Smoothies",
+      price: "15",
+    },
+    {
+      id: 3,
+      image: B3,
+      name: "Boissons Gazeuses",
+      price: "24",
+    },
+    {
+      id: 4,
+      image: B4,
+      name: "Bouteille d'eau",
+      price: "30",
+    },
+  ];
+
   return (
     <div>
-      <div class="container text-center">
-        <div class="row row-cols-2">
-          <Grid
-            Pizza={B1}
-            NamePizza="Jus Naturel"
-            NamePizzaStyle={{
-              fontSize: "20px",
-            }}
-            NewPrice="25 "
-            NewPriceStyle={{
-              marginLeft: "90px",
-            }}
-            yellowStars={0}
-            whiteStars={0}
-          />
-          <Grid
-            Pizza={B2}
-            NamePizza="Smoothies"
-            NamePizzaStyle={{
-              fontSize: "20px",
-            }}
-            NewPrice="15 "
-            NewPriceStyle={{
-              marginLeft: "90px",
-            }}
-            yellowStars={0}
-            whiteStars={0}
-          />
-          <Grid
-            Pizza={B3}
-            NamePizza="Boissons Gazeuses"
-            NamePizzaStyle={{
-              fontSize: "20px",
-            }}
-            NewPrice="24  "
-            NewPriceStyle={{
-              marginLeft: "90px",
-            }}
-            yellowStars={0}
-            whiteStars={0}
-          />
-          <Grid
-            Pizza={B4}
-            NamePizza="Bouteille d'eau"
-            NamePizzaStyle={{
-              fontSize: "20px",
-            }}
-            NewPrice="30 "
-            NewPriceStyle={{
-              marginLeft: "90px",
-            }}
-            yellowStars={0}
-            whiteStars={0}
-          />
+      <div className="container text-center">
+        <div className="row row-cols-lg-2  row-cols-sm-1">
+          {boissons.map((boisson) => (
+            <Grid
+              key={boisson.id}
+              Pizza={boisson.image}
+              NamePizza={boisson.name}
+              NamePizzaStyle={{
+                fontSize: "20px",
+              }}
+              NewPrice={boisson.price}
+              NewPriceStyle={{
+                marginLeft: "90px",
+              }}
+              yellowStars={0}
+              whiteStars={0}
+            />
+          ))}
         </div>
       </div>
     </div>
