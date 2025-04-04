@@ -1,17 +1,26 @@
-const express = require("express");
-const fs = require("fs");
-const path = require("path");
+import express from "express";
+import cors from "cors";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
+// Setup pour __dirname en ESM
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
 const PORT = 3001;
 
-// Middleware pour analyser les données JSON envoyées
+// Middleware CORS ici 👇
+app.use(cors());
+
+// Middleware JSON
 app.use(express.json());
 
-// Endpoint pour sauvegarder la commande
+// Route POST
 app.post("/save-order", (req, res) => {
   const { name, address, phone, cart } = req.body;
 
-  // Crée un objet de commande
   const order = {
     name,
     address,
@@ -20,20 +29,16 @@ app.post("/save-order", (req, res) => {
     orderDate: new Date().toISOString(),
   };
 
-  // Chemin du fichier où la commande sera enregistrée
   const filePath = path.join(__dirname, "orders.json");
 
-  // Lecture du fichier existant (si il existe)
   fs.readFile(filePath, "utf8", (err, data) => {
     let orders = [];
-    if (!err) {
+    if (!err && data) {
       orders = JSON.parse(data);
     }
 
-    // Ajouter la nouvelle commande au tableau
     orders.push(order);
 
-    // Sauvegarder la nouvelle liste de commandes dans le fichier
     fs.writeFile(filePath, JSON.stringify(orders, null, 2), (err) => {
       if (err) {
         return res.status(500).json({ error: "Erreur lors de la sauvegarde de la commande." });
@@ -43,7 +48,7 @@ app.post("/save-order", (req, res) => {
   });
 });
 
-// Démarrer le serveur
+// Lancement serveur
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });

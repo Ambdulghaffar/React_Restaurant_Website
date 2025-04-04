@@ -6,25 +6,33 @@ import { useState } from "react";
 import { useCart } from "../../components/Menu/CartContext";
 
 function Commandes() {
+  const { cart } = useCart(); // Récupération du panier
   const [formData, setFormData] = useState({
     name: "",
     address: "",
     phone: "",
   });
 
-  const { cart } = useCart(); // récupère le panier
   const handleInputChange = (e) => {
+    const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value,
+      [name]: value,
     }));
   };
 
-  const handleConfimOrder = () => {
+  const handleConfirmOrder = () => {
+    // Vérification des champs
+    if (!formData.name || !formData.address || !formData.phone) {
+      alert("Veuillez remplir tous les champs !");
+      return;
+    }
+
     const orderData = {
       ...formData,
       cart,
     };
+
     fetch("http://localhost:3001/save-order", {
       method: "POST",
       headers: {
@@ -33,8 +41,15 @@ function Commandes() {
       body: JSON.stringify(orderData),
     })
       .then((res) => res.json())
-      .then(() => alert("Commande enregistrée !"))
-      .catch((err) => console.error(err));    
+      .then((data) => {
+        alert(data.message || "Commande enregistrée !");
+        // Tu peux vider le formulaire ici si tu veux :
+        setFormData({ name: "", address: "", phone: "" });
+      })
+      .catch((err) => {
+        console.error("Erreur lors de l'envoi :", err);
+        alert("Une erreur est survenue lors de l'envoi de la commande.");
+      });
   };
 
   return (
@@ -98,7 +113,7 @@ function Commandes() {
               <Cart
                 cartTitle="Récapitulatif"
                 cartButton="Confirmer la commande"
-                onConfirm={handleConfimOrder}
+                onConfirm={handleConfirmOrder}
               />
             </div>
           </div>
