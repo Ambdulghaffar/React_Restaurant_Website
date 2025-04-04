@@ -12,7 +12,7 @@ function Hoverlink({ to, children }) {
   return (
     <Link
       to={to}
-      className={`text-decoration-none ${
+      className={`text-decoration-none playfair ${
         hover ? "text-warning" : "text-white"
       }`}
       onMouseEnter={() => setHover(true)}
@@ -29,7 +29,7 @@ function Footer() {
       <div className="container">
         <div className="row">
           <div className="col my-5">
-            <p className="fs-3 fw-bold">Ce qu'on offre</p>
+            <p className="fs-3 fw-bold playfair">Ce qu'on offre</p>
             <div className="d-flex">
               <div className="me-5">
                 <p>
@@ -56,7 +56,7 @@ function Footer() {
             </div>
           </div>
           <div className="col my-5">
-            <p className="fs-3 fw-bold">Liens</p>
+            <p className="fs-3 fw-bold playfair">Liens</p>
             <div>
               <p>
                 <Hoverlink to="/">Acceuil</Hoverlink>
@@ -70,7 +70,7 @@ function Footer() {
             </div>
           </div>
           <div className="col my-5">
-            <p className="fs-3 fw-bold">Contacts</p>
+            <p className="fs-3 fw-bold playfair">Contacts</p>
             <p>
               <FaPhone className="me-4 fs-5" />
               <Link to="tel:0647890345" className="text-decoration-none text-white">
@@ -89,8 +89,8 @@ function Footer() {
                 <Hoverlink>75, bd Ibn Tachfine</Hoverlink>
               </Link>
             </p>
-          </div>
-          <div className="text-center mb-5 d-flex justify-content-center align-items-center">
+          </div> 
+          <div className="text-center playfair merriweatherl mb-5 d-flex justify-content-center align-items-center">
             <div>
               <span>© 2025. All Rights Reserved. Design by PizzaHouse</span>
             </div>

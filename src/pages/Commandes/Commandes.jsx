@@ -56,7 +56,7 @@ function Commandes() {
   return (
     <>
       <BannerZoom title="Votre Commande" />
-      <div className="container h4 fw-bold mt-5 py-3 text-center bg-secondary text-white">
+      <div className="container h4 fw-bold mt-5 py-3 text-center bg-secondary merriweather text-white">
         Veuillez Confirmer votre commande
       </div>
 
@@ -65,7 +65,7 @@ function Commandes() {
         <div className="container  my-4">
           <div className="row">
             <div className="col-7 border border-1 bg-secondary-subtle">
-              <p className="text-center my-4 h4 fw-bold">
+              <p className="text-center my-4 h4 merriweather  fw-bold">
                 Détails de la commande
               </p>
               <div className="m-5 border border-2 bg-white p-5">

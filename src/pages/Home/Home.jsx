@@ -26,7 +26,7 @@ function Home() {
     <>
       <div>
         <Banner />
-        <h1 className="text-center  my-5" style={{ fontSize: "60px" }}>
+        <h1 className="text-center  merriweather my-5" style={{ fontSize: "60px" }}>
           Notre Menu
         </h1>
         <div class="container text-center">
@@ -78,7 +78,7 @@ function Home() {
           }}
           cardTitleStyle={{ fontSize: "60px", fontFamily: "serif" }}
         />
-        <h1 className="text-center m-5 fw-medium " style={{ fontSize: "60px" }}>
+        <h1 className="text-center m-5 fw-medium merriweather" style={{ fontSize: "60px" }}>
           Selected Pizzas
         </h1>
         <div className="container">
