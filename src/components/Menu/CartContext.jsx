@@ -38,12 +38,16 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  useEffect(() => {
-    removeFromCart();
-  }, []);
+  // Vider le panier
+  const clearCart = () => {
+    setCart([]); // Réinitialise le panier
+    localStorage.removeItem("cart"); // Enlève le panier du localStorage
+  };
 
   return (
-    <CartContext.Provider value={{ cart, total, addToCart, removeFromCart }}>
+    <CartContext.Provider
+      value={{ cart, total, addToCart, removeFromCart, clearCart }}
+    >
       {children}
     </CartContext.Provider>
   );
@@ -53,3 +57,5 @@ export const CartProvider = ({ children }) => {
 export const useCart = () => {
   return useContext(CartContext);
 };
+
+

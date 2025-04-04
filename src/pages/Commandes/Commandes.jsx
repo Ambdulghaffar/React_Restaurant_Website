@@ -4,10 +4,11 @@ import Cart from "../../components/Menu/Cart";
 import Footer from "../../components/body/Footer";
 import { useState } from "react";
 import { useCart } from "../../components/Menu/CartContext";
+import { useCommandes } from "../../components/Menu/CommandesContext";
 
 function Commandes() {
-  const { cart,removeFromCart } = useCart(); // Récupération du panier
-  const [formData, setFormData] = useState({
+  const {handleConfirmOrder,handleInputChange}= useCommandes();
+/*   const [formData, setFormData] = useState({
     name: "",
     address: "",
     phone: "",
@@ -41,17 +42,16 @@ function Commandes() {
       body: JSON.stringify(orderData),
     })
       .then((res) => res.json())
-      .then((data) => {
-        alert(data.message || "Commande enregistrée !");
-        // Tu peux vider le formulaire ici si tu veux :
-        setFormData({ name: "", address: "", phone: "" });
-        removeFromCart();
+      .then(() => {
+        alert("Commande enregistrée !");
+        setFormData({ name: "", address: "", phone: "" }); // Réinitialiser le formulaire
+        clearCart(); // Vider le panier
       })
       .catch((err) => {
         console.error("Erreur lors de l'envoi :", err);
-        alert("Une erreur est survenue lors de l'envoi de la commande.");
+        alert("Erreur lors de l'envoi de la commande.");
       });
-  };
+  }; */
 
   return (
     <>
@@ -77,7 +77,9 @@ function Commandes() {
                     <input
                       type="text"
                       className="form-control bg-secondary-subtle"
-                      id="name" name="name"  onChange={handleInputChange}
+                      id="name"
+                      name="name"
+                      onChange={handleInputChange}
                     />
                   </div>
                   <div className="mb-3 ">
@@ -87,9 +89,9 @@ function Commandes() {
                     <input
                       type="text"
                       className="form-control bg-secondary-subtle"
-                      id="address" 
+                      id="address"
                       name="address"
-                      onChange={handleInputChange} 
+                      onChange={handleInputChange}
                     />
                   </div>
                   <div className="mb-3">
