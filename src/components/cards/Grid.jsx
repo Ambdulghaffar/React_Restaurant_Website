@@ -74,13 +74,13 @@ function Grid({
             className={`card-footer text-center ${
               hoverButton ? "bg-success" : "bg-warning"
             } py-1`}
+            onClick={() => addToCart(NamePizza, NewPrice)}
+            style={{ cursor: "pointer" }}
             onMouseEnter={() => setHoverButton(true)}
             onMouseLeave={() => setHoverButton(false)}
           >
             <small
               className="text-white h5"
-              onClick={() => addToCart(NamePizza, NewPrice)}
-              style={{ cursor: "pointer" }}
             >
               Ajouter au panier
             </small>
