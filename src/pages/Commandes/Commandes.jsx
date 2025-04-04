@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useCart } from "../../components/Menu/CartContext";
 
 function Commandes() {
-  const { cart } = useCart(); // Récupération du panier
+  const { cart,removeFromCart } = useCart(); // Récupération du panier
   const [formData, setFormData] = useState({
     name: "",
     address: "",
@@ -45,6 +45,7 @@ function Commandes() {
         alert(data.message || "Commande enregistrée !");
         // Tu peux vider le formulaire ici si tu veux :
         setFormData({ name: "", address: "", phone: "" });
+        removeFromCart();
       })
       .catch((err) => {
         console.error("Erreur lors de l'envoi :", err);

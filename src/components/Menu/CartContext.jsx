@@ -38,6 +38,10 @@ export const CartProvider = ({ children }) => {
     });
   };
 
+  useEffect(() => {
+    removeFromCart();
+  }, []);
+
   return (
     <CartContext.Provider value={{ cart, total, addToCart, removeFromCart }}>
       {children}
