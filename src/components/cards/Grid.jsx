@@ -57,14 +57,14 @@ function Grid({
                 <FaRegStar key={i} />
               ))}
             </h5>
-            <p className="card-text mb-1" style={{ ...NamePizzaStyle }}>
+            <p className="card-text mb-1 playfair " style={{ ...NamePizzaStyle }}>
               {NamePizza}
             </p>
             <div className="d-flex">
               <p className="text-secondary text-decoration-line-through mb-1 me-2">
                 {OldPrice}
               </p>
-              <p className="text-info mb-1" style={{ ...NewPriceStyle }}>
+              <p className="text-info mb-1 rubik" style={{ ...NewPriceStyle }}>
                 {NewPrice} Є
               </p>
             </div>
@@ -80,7 +80,7 @@ function Grid({
             onMouseLeave={() => setHoverButton(false)}
           >
             <small
-              className="text-white h5"
+              className="text-white rubik h5"
             >
               Ajouter au panier
             </small>

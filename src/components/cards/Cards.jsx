@@ -43,7 +43,7 @@ function Cards({
           style={{ marginTop: " 60px ", marginLeft: "100px", ...cardBodyStyle }}
         >
           <h5
-            className="card-title fw-bold playfair"
+            className="card-title fw-bold merriweather"
             style={{ fontSize: "120px", ...cardTitleStyle }}
           >
             {cardtitle1} <br /> {cardtitle2}

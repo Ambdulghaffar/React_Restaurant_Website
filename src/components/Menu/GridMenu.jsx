@@ -5,7 +5,6 @@ import GridSalades from "./GridSalades";
 import GridBoissons from "./GridBoissons";
 import GridDesserts from "./GridDesserts";
 import GridSupplements from "./GridSupplements";
-import { FaTrash } from "react-icons/fa";
 import Cart from "../../components/Menu/Cart";
 
 function GridMenu() {

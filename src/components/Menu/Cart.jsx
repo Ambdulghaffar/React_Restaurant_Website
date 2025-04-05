@@ -61,7 +61,7 @@ function Cart({ cartTitle, cartButton, onConfirm }) {
       >
         {location.pathname === "/commandes" ? (
           <small
-            className="text-white rubik h5"
+            className="text-white rubikg h5"
             onClick={location.pathname === "/commandes" ? onConfirm : undefined}
           >
             {cartButton} - {total} Є
