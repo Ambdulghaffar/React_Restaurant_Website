@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Header() {
+
+  useEffect(() => {
+    console.log("Bonjour tout le monde ")
+  })
+  
+  
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
